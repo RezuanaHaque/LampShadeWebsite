@@ -19,7 +19,7 @@ const WriteReview = () => {
         reviews.date = date
         reviews.rating = value
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://stark-anchorage-74601.herokuapp.com/reviews', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

@@ -8,13 +8,13 @@ const MyOrders = () => {
     const { user,loading } = UseAuth()
     const [filteredProductsUser, setFilteredProductsUser] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/productswithuserinfo?email=${user.email}`)
+        fetch(`https://stark-anchorage-74601.herokuapp.com/productswithuserinfo?email=${user.email}`)
             .then(res => res.json())
             .then(data => setFilteredProductsUser(data))
     })
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/productswithuserinfo/${id}`, {
+        fetch(`https://stark-anchorage-74601.herokuapp.com/productswithuserinfo/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

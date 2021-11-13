@@ -19,7 +19,7 @@ const AddProduct = () => {
         const { name, picture, about, price } = productData
         const product = { name, picture, about, price }
         // console.log(product);
-        fetch('http://localhost:5000/addproducts', {
+        fetch('https://stark-anchorage-74601.herokuapp.com/addproducts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

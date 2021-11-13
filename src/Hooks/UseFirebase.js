@@ -97,7 +97,7 @@ const UseFirebase = () => {
             });
     }
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user?.email}`)
+        fetch(`https://stark-anchorage-74601.herokuapp.com/users/${user?.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user?.email]);
@@ -106,7 +106,7 @@ const UseFirebase = () => {
         // console.log("hello")
         const user = { email, displayName }
 
-        fetch('http://localhost:5000/users', {
+        fetch('https://stark-anchorage-74601.herokuapp.com/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

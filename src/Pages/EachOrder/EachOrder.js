@@ -12,7 +12,7 @@ const EachOrder = ({ product, handleDelete, user }) => {
         setStatus('shipped')
         const statusObj = { email, _id }
         console.log(statusObj);
-        fetch('http://localhost:5000/productswithusers', {
+        fetch('https://stark-anchorage-74601.herokuapp.com/productswithusers', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

@@ -14,7 +14,7 @@ const SingleProduct = () => {
     const { singleproductID } = useParams()
     const [singleProduct, setSingleProduct] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${singleproductID}`)
+        fetch(`https://stark-anchorage-74601.herokuapp.com/products/${singleproductID}`)
             .then(res => res.json())
             .then(data => {
                 setSingleProduct(data[0])
@@ -33,7 +33,7 @@ const SingleProduct = () => {
         const data = singleProduct;
         data.email = user.email
         data.moreInfo = logindata
-        fetch('http://localhost:5000/products',{
+        fetch('https://stark-anchorage-74601.herokuapp.com/products',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

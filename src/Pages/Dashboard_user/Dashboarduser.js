@@ -4,7 +4,6 @@ import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import Typography from '@mui/material/Typography';
 import { NavLink } from 'react-router-dom';
 import UseAuth from '../../Hooks/UseAuth';
 import { Container } from '@mui/material';

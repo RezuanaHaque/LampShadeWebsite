@@ -6,7 +6,7 @@ import EachManageProduct from './EachManageProduct';
 const ManageProduct = () => {
     const [products,setProducts] = UseProducts()
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/products/${id}`, {
+        fetch(`https://stark-anchorage-74601.herokuapp.com/products/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

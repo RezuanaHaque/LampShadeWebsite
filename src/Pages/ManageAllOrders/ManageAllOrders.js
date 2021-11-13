@@ -8,12 +8,12 @@ const ManageAllOrders = () => {
     const {loading,user}=UseAuth()
     const [orders, setOrders] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/productswithusers`)
+        fetch(`https://stark-anchorage-74601.herokuapp.com/productswithusers`)
             .then(res => res.json())
             .then(data => setOrders(data))
     })
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/productswithuserinfo/${id}`, {
+        fetch(`https://stark-anchorage-74601.herokuapp.com/productswithuserinfo/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

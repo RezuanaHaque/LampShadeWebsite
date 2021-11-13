@@ -1,0 +1,16 @@
+.pictext {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+.btn {
+    position: absolute;
+    top: 80px;
+    left: 5px;
+    /* border: 1px solid rgb(88, 88, 88); */
+    color: gray;
+  }
+  .container {
+    position: relative;
+    /* text-align: center; */
+  }

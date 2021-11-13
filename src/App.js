@@ -21,6 +21,8 @@ import HomeReview from './Pages/Home/HomeReview';
 import OfferSection from './Pages/OfferSection/OfferSection';
 import NavigationAdmin from './Pages/Navigation/NavigationAdmin';
 import UseAuth from './Hooks/UseAuth';
+import Footer from './Pages/Footer/Footer';
+import Error from './Pages/Error/Error';
 
 function App() {
   // const {admin}=UseAuth()
@@ -30,14 +32,14 @@ function App() {
       <BrowserRouter>
 
         <Switch>
-          <Route path='/home'>
+          <Route exact path='/'>
             <Navigation></Navigation>
             <Home></Home>
             <HomeProducts></HomeProducts>
             <OfferSection></OfferSection>
             <HomeReview></HomeReview>
           </Route>
-          <Route exact path='/'>
+          <Route path='/home'>
             <Navigation></Navigation>
             <Home></Home>
             <HomeProducts></HomeProducts>
@@ -48,14 +50,12 @@ function App() {
             <Navigation></Navigation>
             <Login></Login>
           </Route>
-          {/* <Route path='/homereview'>
-            <Navigation></Navigation>
-            <HomeReview></HomeReview>
-          </Route> */}
+
           <Route path='/morelamps'>
             <Navigation></Navigation>
             <AllProducts></AllProducts>
           </Route>
+
           <Route path='/pay'>
             <Navigation></Navigation>
             <Pay></Pay>
@@ -77,7 +77,7 @@ function App() {
             <WriteReview></WriteReview>
           </Route>
           <Route path='/manageorders'>
-          <NavigationAdmin></NavigationAdmin>
+            <NavigationAdmin></NavigationAdmin>
             <ManageAllOrders></ManageAllOrders>
           </Route>
           <Route path='/manageproducts'>
@@ -89,6 +89,7 @@ function App() {
             <MakeAdmin></MakeAdmin>
           </Route>
           <Route path='/reviews'>
+          <Navigation></Navigation>
             <Review></Review>
           </Route>
           <PrivateRoute path='/dashboard'>
@@ -98,7 +99,15 @@ function App() {
             <NavigationAdmin></NavigationAdmin>
             <AddProduct></AddProduct>
           </Route>
+          {/* <Route path='/footer'>
+            <Footer></Footer>
+          </Route> */}
+          <Route path='*'>
+            <Navigation></Navigation>
+            <Error></Error>
+          </Route>
         </Switch>
+        <Footer></Footer>
       </BrowserRouter>
     </AuthProvider>
   );

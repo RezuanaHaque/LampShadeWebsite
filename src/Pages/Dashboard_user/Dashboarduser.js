@@ -19,7 +19,7 @@ import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 
 function Dashboarduser(props) {
   const { logOut, admin, user } = UseAuth()
-  console.log(admin);
+  // console.log(admin);
 
   return (
     <Container>

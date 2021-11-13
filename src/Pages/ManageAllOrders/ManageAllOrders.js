@@ -5,7 +5,7 @@ import UseAuth from '../../Hooks/UseAuth';
 import EachOrder from '../EachOrder/EachOrder';
 
 const ManageAllOrders = () => {
-    const {loading}=UseAuth()
+    const {loading,user}=UseAuth()
     const [orders, setOrders] = useState([])
     useEffect(() => {
         fetch(`http://localhost:5000/productswithusers`)
@@ -33,7 +33,7 @@ const ManageAllOrders = () => {
             </Typography>
             <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                 {!loading &&
-                    orders.map(product => <EachOrder key={product._id} product={product} handleDelete={handleDelete}></EachOrder>)
+                    orders.map(product => <EachOrder key={product._id} product={product} user={user} handleDelete={handleDelete}></EachOrder>)
                 }
                 <Box sx={{marginLeft:'50%'}}>
                     {

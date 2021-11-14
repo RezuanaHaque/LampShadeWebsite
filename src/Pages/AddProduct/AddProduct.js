@@ -26,9 +26,10 @@ const AddProduct = () => {
             },
             body: JSON.stringify(product)
         })
-            .then()
-            history.push('/manageproducts')
-            window.location.reload()
+            .then(res=>res.json())
+
+            history.push('/dashboard')
+            // window.location.reload()
         e.preventDefault()
     }
     return (

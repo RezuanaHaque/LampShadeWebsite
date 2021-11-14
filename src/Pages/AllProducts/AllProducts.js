@@ -10,7 +10,7 @@ const AllProducts = () => {
     const { loading } = UseAuth()
     return (
         <Container>
-            <Typography style={{ textAlign: 'center', color: "gold" }} gutterBottom variant="h2" component="div">
+            <Typography style={{ textAlign: 'center', color: "gold" }} gutterBottom variant="h4" component="div">
                 Products
             </Typography>
             <Divider />

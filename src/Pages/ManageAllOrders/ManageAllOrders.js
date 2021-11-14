@@ -28,7 +28,7 @@ const ManageAllOrders = () => {
     }
     return (
         <Container>
-            <Typography style={{ textAlign: 'center', color: "gold" }} gutterBottom variant="h2" component="div">
+            <Typography style={{ textAlign: 'center', color: "gold"  ,marginTop:'80px'}} gutterBottom variant="h4" component="div">
                 Manage All Orders
             </Typography>
             <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>

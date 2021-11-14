@@ -23,7 +23,7 @@ const EachHomeProduct = ({ product ,index}) => {
                     alt="green iguana"
                 />
                 <CardContent
-                    sx={{ height: 120 }}
+                    sx={{ height: 155 }}
                 >
                     <Typography gutterBottom variant="h6" component="div">
                         {product?.name}
@@ -36,7 +36,7 @@ const EachHomeProduct = ({ product ,index}) => {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Link to={`/products/${product?._id}`}><Button size="small" >Buy</Button></Link>
+                    <Link to={`/products/${product?._id}`}><Button varient='contained' size="small" >Buy</Button></Link>
                     {/* <Link to={`/products/${product?._id}`}><Button size="small">Learn More</Button></Link> */}
                 </CardActions>
             </Card>

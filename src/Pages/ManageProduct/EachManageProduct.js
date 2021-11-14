@@ -15,7 +15,7 @@ const EachManageProduct = ({product,handleDelete}) => {
                     alt="green iguana"
                 />
                 <CardContent
-                    sx={{ height: 120 }}
+                    sx={{ height: 150 }}
                 >
                     <Typography gutterBottom variant="h6" component="div">
                         {product?.name}

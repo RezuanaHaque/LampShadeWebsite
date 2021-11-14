@@ -1,8 +1,8 @@
 import AuthProvider from './Context/AuthProvider';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Register from './Pages/Register/Register';
 import Login from './Pages/Login/Login';
-import Navigation from './Pages/Navigation/Navigation';
 import Home from './Pages/Home/Home';
 import HomeProducts from './Pages/Home/HomeProducts';
 import Review from './Pages/Review/Review';
@@ -19,10 +19,10 @@ import Dashboarduser from './Pages/Dashboard_user/Dashboarduser';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import HomeReview from './Pages/Home/HomeReview';
 import OfferSection from './Pages/OfferSection/OfferSection';
-import NavigationAdmin from './Pages/Navigation/NavigationAdmin';
-import UseAuth from './Hooks/UseAuth';
 import Footer from './Pages/Footer/Footer';
 import Error from './Pages/Error/Error';
+import Navig from './Pages/Navigation/Navig';
+import NavigAdmin from './Pages/Navigation/NavigAdmin';
 
 function App() {
   // const {admin}=UseAuth()
@@ -33,77 +33,75 @@ function App() {
 
         <Switch>
           <Route exact path='/'>
-            <Navigation></Navigation>
+            <Navig></Navig>
             <Home></Home>
             <HomeProducts></HomeProducts>
             <OfferSection></OfferSection>
             <HomeReview></HomeReview>
           </Route>
           <Route path='/home'>
-            <Navigation></Navigation>
+            <Navig></Navig>
             <Home></Home>
             <HomeProducts></HomeProducts>
             <OfferSection></OfferSection>
             <HomeReview></HomeReview>
           </Route>
           <Route path='/login'>
-            <Navigation></Navigation>
+            <Navig></Navig>
             <Login></Login>
           </Route>
 
           <Route path='/morelamps'>
-            <Navigation></Navigation>
+            <Navig></Navig>
             <AllProducts></AllProducts>
           </Route>
 
           <Route path='/pay'>
-            <Navigation></Navigation>
+            <Navig></Navig>
             <Pay></Pay>
           </Route>
+
           <Route path='/myorders'>
-            <Navigation></Navigation>
+            <Navig></Navig>
             <MyOrders></MyOrders>
           </Route>
           <PrivateRoute path='/products/:singleproductID'>
-            <Navigation></Navigation>
+            <Navig></Navig>
             <SingleProduct></SingleProduct>
           </PrivateRoute>
           <Route path='/register'>
-            <Navigation></Navigation>
+            <Navig></Navig>
             <Register></Register>
           </Route>
           <Route path='/writereview'>
-            <Navigation></Navigation>
+            <Navig></Navig>
             <WriteReview></WriteReview>
           </Route>
           <Route path='/manageorders'>
-            <NavigationAdmin></NavigationAdmin>
+            <NavigAdmin></NavigAdmin>
             <ManageAllOrders></ManageAllOrders>
           </Route>
           <Route path='/manageproducts'>
-            <NavigationAdmin></NavigationAdmin>
+            <NavigAdmin></NavigAdmin>
             <ManageProduct></ManageProduct>
           </Route>
           <Route path='/makeadmin'>
-            <NavigationAdmin></NavigationAdmin>
+            <NavigAdmin></NavigAdmin>
             <MakeAdmin></MakeAdmin>
           </Route>
           <Route path='/reviews'>
-          <Navigation></Navigation>
+            <Navig></Navig>
             <Review></Review>
           </Route>
           <PrivateRoute path='/dashboard'>
             <Dashboarduser></Dashboarduser>
           </PrivateRoute>
           <Route path='/addproduct'>
-            <NavigationAdmin></NavigationAdmin>
+            <NavigAdmin></NavigAdmin>
             <AddProduct></AddProduct>
           </Route>
-          {/* <Route path='/footer'>
-            <Footer></Footer>
-          </Route> */}
           <Route path='*'>
-            <Navigation></Navigation>
+            <Navig></Navig>
             <Error></Error>
           </Route>
         </Switch>

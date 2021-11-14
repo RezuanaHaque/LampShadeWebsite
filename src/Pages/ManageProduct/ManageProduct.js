@@ -21,7 +21,7 @@ const ManageProduct = () => {
     }
     return (
         <Container sx={{ marginTop: 5 }}>
-            <Typography style={{ textAlign: 'center', color: "gold" }} gutterBottom variant="h2" component="div">
+            <Typography style={{ textAlign: 'center', color: "gold" ,marginTop:'80px'}} gutterBottom variant="h3" component="div">
                 Manage All Products
             </Typography>
             <Divider />

@@ -5,7 +5,7 @@ import { useHistory } from 'react-router';
 import UseAuth from '../../Hooks/UseAuth';
 
 const WriteReview = () => {
-    const history=useHistory()
+    const history = useHistory()
     const [value, setValue] = React.useState(2);
     const { user } = UseAuth()
     const [review, setReview] = useState()
@@ -28,9 +28,10 @@ const WriteReview = () => {
         })
             .then(res => res.json())
             .then(data => setReview(data))
-            history.push('/reviews')
+        history.push('/morelamps')
         e.preventDefault()
     }
+
     var curr = new Date();
     curr.setDate(curr.getDate() + 3);
     var date = curr.toISOString().substr(0, 10);
@@ -69,6 +70,7 @@ const WriteReview = () => {
 
                         <Box textAlign='center' sx={{ m: 2 }} >
                             <Button type='submit' variant='contained'>Submit</Button>
+
                         </Box>
 
                     </form>

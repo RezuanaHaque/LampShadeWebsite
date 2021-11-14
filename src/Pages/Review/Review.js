@@ -15,7 +15,7 @@ const Review = () => {
     return (
         <Container>
             <Divider style={{ marginBottom: '60px' }}></Divider>
-            <Typography style={{ textAlign: 'center', color: "gold" ,marginTop:'30px' }} gutterBottom variant="h2" component="div">
+            <Typography style={{ textAlign: 'center', color: "gold" ,marginTop:'30px' }} gutterBottom variant="h4" component="div">
                 Reviews
             </Typography>
             

@@ -8,3 +8,4 @@ live site: https://lampshade-8e299.web.app/home
 - they can also other reviews of other users
 - from the admin site a person can add or remove any products or orders
 - this website is responsive for mobile and tab
+- there are two different navbar for both admin and normal user

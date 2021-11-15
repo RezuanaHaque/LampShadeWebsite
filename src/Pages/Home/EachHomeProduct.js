@@ -37,11 +37,10 @@ const EachHomeProduct = ({ product ,index}) => {
                 </CardContent>
                 <CardActions>
                     <Link to={`/products/${product?._id}`}><Button varient='contained' size="small" >Buy</Button></Link>
-                    {/* <Link to={`/products/${product?._id}`}><Button size="small">Learn More</Button></Link> */}
+                    
                 </CardActions>
             </Card>
         </Grid>
-        {/* <SingleProduct index={index} /> */}
         </>
     );
 };

@@ -86,8 +86,8 @@ function Dashboarduser(props) {
           </List>
           <Divider />
         </Grid>
-        <Grid item xs={12} lg={6} md={6} sx={{ marginTop: '-100px' }}>
-          <img width='550' src="https://www.salonbookingsystem.com/wp-content/uploads/2019/11/salon_booking_system_scheduling_features.png" alt="" />
+        <Grid item xs={12} lg={6} md={6} >
+          <img width='100%' height='100%' src="https://www.salonbookingsystem.com/wp-content/uploads/2019/11/salon_booking_system_scheduling_features.png" alt="" />
         </Grid>
       </Grid>
     </Container>
